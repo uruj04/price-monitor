@@ -1,0 +1,14 @@
+[
+  {
+    "name": "A Light in the Attic",
+    "url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+    "price_selector": "div.product_main p.price_color",
+    "target_price": 50.00
+  },
+  {
+    "name": "Tipping the Velvet",
+    "url": "https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+    "price_selector": "div.product_main p.price_color",
+    "target_price": 55.00
+  }
+]

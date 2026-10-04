@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Delayed price</title></head>
+<body>
+  <div class="product_main" id="box"><h1>Slow product</h1></div>
+  <script>
+    setTimeout(function () {
+      var p = document.createElement("p");
+      p.className = "price_color";
+      p.textContent = "£49.99";
+      document.getElementById("box").appendChild(p);
+    }, 800);
+  </script>
+</body>
+</html>
