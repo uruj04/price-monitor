@@ -59,6 +59,34 @@ python main.py history
 python main.py history --name "A Light in the Attic" --limit 10
 ```
 
+## Live web demo
+
+The project also includes a browser-based Streamlit demo. It uses the same
+Playwright scraper, lets visitors enter a permitted public product URL and price
+CSS selector, and displays the current price plus the captured browser screenshot.
+The demo does not persist visitor data.
+
+Run it locally:
+
+```bash
+pip install -r requirements.txt
+playwright install chromium
+streamlit run streamlit_app.py
+```
+
+### Deploy a public demo
+
+The included `Dockerfile` installs the Chromium browser required by Playwright.
+Deploy the repository as a Docker web service on [Render](https://render.com/):
+
+1. Sign in to Render with GitHub and choose **New +** → **Web Service**.
+2. Select `uruj04/price-monitor` and choose **Docker** as the runtime.
+3. Choose a service name and click **Create Web Service**.
+4. When the build completes, Render provides a public `onrender.com` live-demo URL.
+
+The first check after an inactive free-tier deployment can take a short time while
+the service wakes and starts Chromium.
+
 Exit codes: `0` success, `1` configuration error, `2` at least one product failed.
 
 ## Configuring products
